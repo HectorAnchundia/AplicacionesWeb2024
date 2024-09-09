@@ -1,0 +1,178 @@
+style
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos del menú de navegación */
+        nav {
+            width: 250px; /* Ancho del menú en pantallas grandes */
+            background-color: #222;
+            padding: 0;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            transition: transform 0.3s ease; /* Para animación de entrada y salida */
+        }
+
+        /* Sección del perfil en el menú */
+        .profile-section {
+            background-color: #333; /* Fondo que resalta */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .profile-section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .profile-section h1 {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .profile-section p {
+            font-size: 14px;
+            margin: 0;
+            color: #ccc;
+        }
+
+        /* Lista de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Estilos del contenido */
+        .content {
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Botón de menú hamburguesa */
+        .menu-toggle {
+            display: none; /* Oculto por defecto, solo visible en móviles */
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilos para cada sección */
+        .contacto, .experiencia, .educacion, .habilidades, .idiomas {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries: Ajuste para pantallas grandes (tablets y PCs) */
+        @media (min-width: 768px) {
+            body {
+                flex-direction: row;
+            }
+
+            nav {
+                transform: translateX(0); /* Menú siempre visible en pantallas grandes */
+            }
+
+            .content {
+                margin-left: 270px; /* Espacio para el contenido a la derecha del menú */
+            }
+
+            .menu-toggle {
+                display: none; /* No se necesita en pantallas grandes */
+            }
+        }
+
+        /* Media Queries: Ajustes para pantallas pequeñas (móviles) */
+        @media (max-width: 767px) {
+            nav {
+                width: 250px;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: translateX(-100%); /* Oculto fuera de la vista */
+                transition: transform 0.3s ease; /* Transición suave */
+            }
+
+            .menu-toggle {
+                display: block; /* Botón visible en pantallas pequeñas */
+                background-color: #2222225b;
+            }
+
+            .menu-open nav {
+                transform: translateX(0); /* Mostrar el menú al presionar el botón */
+            }
+
+            .content {
+                margin-left: 0; /* Sin margen en móviles */
+            }
+        }
+
+        /* Estilos para el botón de cierre del menú en móviles */
+        .close-btn {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Mostrar el botón de cierre cuando el menú está abierto */
+        .menu-open .close-btn {
+            display: block;
+        }

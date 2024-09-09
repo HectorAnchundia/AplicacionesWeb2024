@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Hector Anchundia</title>
+    <link href="Style.css" rel="stylesheet"/>
+</head>
+</head>
+<body>
+    <!-- Botón de menú hamburguesa -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <!-- Menú de navegación -->
+    <nav>
+    <!-- Botón de cierre del menú en móviles -->
+    <button class="close-btn" onclick="toggleMenu()">X</button>
+        <!-- Sección del perfil -->
+        <div class="profile-section">
+            <!-- Imagen de perfil -->
+            <img src="Images/Curriculum.jpg" alt="Imagen de perfil" class="profile-img">
+            <!-- Nombre -->
+            <h1>Hector Anchundia</h1>
+            <!-- Título de carrera -->
+            <p>Ing.Tecnologías<br> de la Informacion</p>
+        </div>
+
+        <!-- Navegación -->
+        <ul>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#idiomas">Idiomas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <p>Teléfono: (593) 99 340 4859</p>
+            <p>Email: ramsesanchundia@outlook.es</p>
+            <p>Identificación: 1314406800</p>
+            <p>Dirección: Calle Eloy alfaro Entre Avenidas Rodrigo Cardenas y Lorenzo de Graicoa</p>
+        </section>
+
+        <!-- Sección de Experiencia -->
+        <section id="experiencia" class="experiencia">
+            <h2>Experiencia</h2>
+            <p><strong>2019 - Vendedor en Ferreteria</strong></p>
+            <p>Desempeño de labores en Ventas y Atencion al cliente hasta la actualidad.</p>
+            <p><strong>2020 - Tecnico en Computadoras</strong></p>
+            <p>Armado, Reparacion y Mantenimiento de computadores en general hasta la actualidad.</p>
+            <p><strong>2021 - Electricista</strong></p>
+            <p> Desempeño en el papel de Instalaciones electricas para hogares (2 años).</p>
+        </section>
+
+        <!-- Sección de Educación -->
+        <section id="educacion" class="educacion">
+            <h2>Educación</h2>
+            <p><strong>2021 - Tecnico Industrial en Electronica de Consumo</strong> - Colegio de Bachillerato Luis Arboleda Martínez </p>
+            <p><strong>2023 - Capacitacion en Habilidades blandas centradas en Empleabilidad</strong> - Proyecto SCALE</p>
+        </section>
+
+        <!-- Sección de Habilidades -->
+        <section id="habilidades" class="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Liderazgo</li>
+                <li>Comunicación</li>
+                <li>Toma de decisiones</li>
+                <li>Gestión del tiempo</li>
+                <li>Trabajo en equipo</li>
+                <li>Pensamiento estratégico</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Idiomas -->
+        <section id="idiomas" class="idiomas">
+            <h2>Idiomas</h2>
+            <p>Español <br> Inglés</p>
+        </section>
+    </div>
+
+    <script>
+        // Función para alternar la visibilidad del menú
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+        }
+    </script>
+</body>
+</html>
