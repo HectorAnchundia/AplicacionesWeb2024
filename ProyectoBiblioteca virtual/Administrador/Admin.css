@@ -1,0 +1,182 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d41c1c;
+    color: white;
+    padding: 5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 75px;
+    margin-left: -12%;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.header-buttons button {
+    background-color: #d41c1c;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header-buttons button:hover {
+    background-color: #730000;
+}
+
+main {
+    padding: 20px;
+    width: 80%;
+    margin: 80px auto 0; /* Para evitar que el contenido se superponga con el header */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gestion-section {
+    display: none;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.user-list, .catalog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-list ul, .catalog-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li, .catalog-list li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-list li.selected, .catalog-list li.selected {
+    background-color: #ddd;
+}
+
+.action-buttons, .catalog-action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-button, .delete-button, .hide-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-button:hover, .delete-button:hover, .hide-button:hover {
+    background-color: #555;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-form label {
+    font-weight: bold;
+}
+
+.user-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-button, .save-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cancel-button:hover, .save-button:hover {
+    background-color: #555;
+}
+
+.report-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.report-filters label {
+    font-weight: bold;
+}
+
+.report-filters input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.generate-report-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.generate-report-button:hover {
+    background-color: #555;
+}
