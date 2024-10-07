@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* Ajusta este valor según la altura de tu header */
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d41c1c;
+    color: white;
+    padding: 5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil si deseas */
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #559e33;
+    color: white;
+    height: 5px;
+    padding: 5px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.header-buttons button {
+    background-color: #d41c1c;
+    color: white;
+    border: 1%;
+    border-color: rgb(168, 18, 18);
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.header-buttons button:hover {
+    background-color: #ad0303;
+}
+
+main {
+    padding: 20px;
+    width: 80%;
+    margin-top: 80px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.nuevas-publicaciones, .documentos-mas-leidos {
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.items {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    
+}
+
+.items img {
+    width: 120px;
+    height: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative
+}
+
+.scroll-button {
+    background-color: #33333300;
+    color: rgb(69, 68, 68);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.scroll-button:hover {
+    background-color: #55555500;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
