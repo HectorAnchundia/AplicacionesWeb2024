@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Usuario - Biblioteca</title>
+    <link rel="stylesheet" href="Usuario.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images\LogoUleam.png" alt="Logo de la Biblioteca">
+        </div>
+        <div class="header-icons">
+            <img src="icons/Menu.png" alt="Menú" class="menu-icon" onclick="toggleMenu()">
+            <img src="icons/Notificaciones.png" alt="Notificaciones" class="bell-icon" onclick="toggleNotifications()">
+            <img src="icons/Busqueda.png" alt="Buscar" class="search-icon">
+        </div>
+    </header>
+    <main>
+        <section class="guardados">
+            <h2>Libros Guardados</h2>
+            <div class="items-container">
+                <button class="arrow left-arrow">&lt;</button>
+                <div class="items">
+                    <!-- Aquí irán los ítems guardados -->
+                </div>
+                <button class="arrow right-arrow">&gt;</button>
+            </div>
+        </section>
+        <section class="recomendaciones">
+            <h2>Recomendaciones</h2>
+            <div class="items-container">
+                <button class="arrow left-arrow">&lt;</button>
+                <div class="items">
+                    <!-- Aquí irán las recomendaciones -->
+                </div>
+                <button class="arrow right-arrow">&gt;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Menú Plegable -->
+    <div class="menu-plegable" id="menuPlegable">
+        <div class="menu-header">
+            <img src="images/PruebaUser.png" alt="Foto del Usuario" class="user-photo">
+            <p>Sekai Natsumi</p>
+        </div>
+        <ul class="menu-options">
+            <li>Perfil</li>
+            <li>Historial de Búsqueda</li>
+            <li>Libros Guardados</li>
+            <li>Recomendaciones</li>
+            <li>Catálogo</li>
+        </ul>
+    </div>
+
+    <!-- Sección de Búsqueda -->
+    <div class="busqueda">
+        <input type="text" placeholder="Buscar...">
+        <div class="filtros">
+            <label>Rango de Años</label>
+            <input type="text">
+            <label>Tipo de Documento</label>
+            <input type="text">
+            <label>Área</label>
+            <input type="text">
+            <label>Autor</label>
+            <input type="text">
+        </div>
+        <button>Buscar</button>
+    </div>
+
+<!-- Sección de Notificaciones -->
+    <div class="notifications" id="notifications">
+        <h3>Notificaciones</h3>
+        <ul>
+            <li>Notificación 1</li>
+            <li>Notificación 2</li>
+            <li>Notificación 3</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menuPlegable');
+            if (menu.style.transform === 'translateX(0%)') {
+                menu.style.transform = 'translateX(-100%)';
+            } else {
+                menu.style.transform = 'translateX(0%)';
+            }
+        }
+
+        function toggleNotifications() {
+            const notifications = document.getElementById('notifications');
+            if (notifications.style.transform === 'translateX(0%)') {
+                notifications.style.transform = 'translateX(100%)'; // Oculta la sección fuera de la pantalla
+            } else {
+                notifications.style.transform = 'translateX(0%)'; // Muestra la sección deslizándola hacia dentro
+            }
+        }
+        function toggleNotifications() {
+            const notifications = document.getElementById('notifications');
+            const headerIcons = document.querySelector('.header-icons'); // Selecciona los íconos del header
+        
+            if (notifications.style.transform === 'translateX(0%)') {
+                notifications.style.transform = 'translateX(100%)'; // Ocultar notificaciones
+                headerIcons.style.marginRight = '25px'; // Mover los íconos de vuelta a su posición original
+            } else {
+                notifications.style.transform = 'translateX(0%)'; // Mostrar notificaciones
+                headerIcons.style.marginRight = '285px'; // Mover los íconos a la izquierda
+            }
+        }
+    </script>
+</body>
+</html>
